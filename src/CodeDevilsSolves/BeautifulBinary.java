@@ -1,4 +1,4 @@
-package sp17chlng3;
+package CodeDevilsSolves;
 
 /**
  * A Beautiful Binary string is considered
