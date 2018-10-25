@@ -1,4 +1,4 @@
-package challenge3;
+package CodeDevilsSolves;
 /**
  * The goal of this it to check an array, that must be odd in length,
  * for an integer that does not have a pair.

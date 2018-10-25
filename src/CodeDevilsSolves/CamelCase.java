@@ -1,4 +1,4 @@
-package challenge3;
+package CodeDevilsSolves;
 
 /**
  * The goal of this is to count the number of words

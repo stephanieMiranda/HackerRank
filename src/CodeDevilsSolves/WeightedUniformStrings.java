@@ -1,4 +1,4 @@
-package sp17chlng2;
+package CodeDevilsSolves;
 /**
  * Takes in a s, a string, and n, the number of queries.
  * For each lowercase letter from a-z, each has a weight.
