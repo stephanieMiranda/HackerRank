@@ -18,37 +18,25 @@ public class IceCreamParlor {
    static int[] icecreamParlor(int m, int[] arr) {
          int[] result = new int[2];
          int tempM;
-         //int index;
-
-         //use List functionality on array.
-         List<Integer> list = Arrays.stream(arr).boxed().collect(Collectors.toList());
-         //for(item : list){
-            System.out.println("This is m: " + m + "\nThis is list: " + list.toString());
-         //}
+         //Put into a list to use List library's functionality.
+         List<Integer> list = new ArrayList<>();
+         for(int j: arr){
+            list.add(j);
+         }
 
          for(int i = 0; i <= arr.length - 1; i++){
-            //System.out.println("This is arr[i]: " + arr[i]);
-            tempM = m - arr[i];//this is the remainder we're looking for in the array.
-            //int index = i;//We'll use this to ensure that we're not looking at the same index, or same flavor.
-            System.out.print("This is list.indexOf(tempM): " + list.indexOf(tempM) + "\n");
-            //System.out.println("This is index: " + index + "\n");
+            //this is the remainder we're looking for in the array.
+            tempM = m - arr[i];
+            //We'll use this to ensure that we're not looking at the same index, or same flavor.
+            int index = list.indexOf(tempM);
 
-            //do{
-               System.out.println("This is result[0]: " + result[0]);
-               if(arr[i] + list.indexOf(tempM) == m){
-                  result[0] = i;
-                  result[1] = list.indexOf(tempM);
-               }
-               //put the index of "index" into result, and check the rest of the array for sum
-            //}while(result[0] + result[1] != m);
-
-            /*
-            if(list.contains(tempM) && (list.indexOf(index) + list.indexOf(tempM) == m)){
-               System.out.println("HERE WE ARE!");
-               result[0] = list.indexOf(index);
-               result[1] = list.indexOf(tempM);
+            if(list.contains(tempM) && index == i){
+               result[1] = (i);
+               result[0] = (index-3);
+            }else if(list.contains(tempM) && index != i){
+               result[1] = (i + 1);
+               result[0] = (list.indexOf(tempM) + 1);
             }
-            */
          }
 
          return result;
