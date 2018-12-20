@@ -33,9 +33,10 @@ public class NonDivisibleSubset implements Cloneable{
 
       for(int i = 0; i < (1<<bitLength); i++){
          for(int j = 0; j < bitLength; j++){
-            if((i && (1<<j) > 0)){
+            /*if((i && (1<j) > 0)){
                System.out.println(S[j]);
-            }
+            }*/
+
          }
       }
 
