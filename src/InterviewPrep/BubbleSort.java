@@ -25,16 +25,21 @@ public class BubbleSort {
       /*This is checking the elements of the passes array, and
       if the comparision returns true, it implements the swap method.*/
       for(int i = 0; i < size; i++){
-         System.out.println("This is a[i]: " + String.valueOf(a[i]));
+         //System.out.println("This is a[i]: " + String.valueOf(a[i]));
          for (int j = 0; j < size-1; j++){
-            System.out.println("This is a[j]: " + String.valueOf(a[j]));
-            System.out.println("This is a[j+1]: " + String.valueOf(a[j+1]));
+            //System.out.println("This is a[j]: " + String.valueOf(a[j]));
+            //System.out.println("This is a[j+1]: " + String.valueOf(a[j+1]));
             if(a[j] > a[j+1]){
                int[] swapped = swap(a[j], a[j+1]);
-               temp[j] = swapped[j];
-               temp[j+1] = swapped[j+1];
-               System.out.println("This is temp: " + Arrays.toString(temp));
+               temp[j] = swapped[0];
+               temp[j+1] = swapped[1];
+               //System.out.println("This is temp: " + Arrays.toString(temp));
                counter++;
+               sortedArr = temp;
+               System.out.println("This is sortedArr: " + Arrays.toString(sortedArr));
+            } else {
+               temp[j] = a[j];
+               temp[j+1] = a[j+1];
                sortedArr = temp;
             }
          }
@@ -49,7 +54,7 @@ public class BubbleSort {
       newList.add(b);
       newList.add(a);
       int[] newArr = new int[newList.size()];
-      System.out.println("This is newList: " + newList);
+      //System.out.println("This is newList: " + newList);
 
       for(int i = 0; i <= newList.size() - 1; i++){
          newArr[i] = newList.get(i);
@@ -62,7 +67,7 @@ public class BubbleSort {
 
    public static void main(String[] args) throws IOException{
 
-      File file = new File("./resources/interview-prep/ctci-bubble-sort-testcases/input/input01.txt");
+      File file = new File("./resources/interview-prep/ctci-bubble-sort-testcases/input/input03.txt");
       Scanner scanner = new Scanner(file);
 
       int n = scanner.nextInt();
