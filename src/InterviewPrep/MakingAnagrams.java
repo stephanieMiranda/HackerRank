@@ -18,8 +18,8 @@ public class MakingAnagrams {
       int ans = 0;
       //List<Character> newString = new ArrayList();
       //System.out.println("This is string a: " + a + "\nThis is sting b: " + b);
-      //String longerString = findLongerString(a, b);
-      //String shorterString;
+      String longerString = findLongerString(a, b);
+      String shorterString;
       //String newStr = "";
       //int deletions = 0;
 
