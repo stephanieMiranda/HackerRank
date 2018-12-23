@@ -15,25 +15,28 @@ public class LeftRotation {
 
 
 
-   private static final Scanner scanner = new Scanner(System.in);
+   //private static final Scanner scanner = new Scanner(System.in);
 
-   public static void main(String[] args) {
-      String[] nd = scanner.nextLine().split(" ");
+   public static void main(String[] args) throws IOException{
+      //String[] nd = scanner.nextLine().split(" ");
+      File file = new File("./array-left-rotation-testcases/input/input00.txt");
+      Scanner scanner = new Scanner(file);
 
-      int n = Integer.parseInt(nd[0]);
+      //int n = Integer.parseInt(nd[0]);
 
-      int d = Integer.parseInt(nd[1]);
+      //int d = Integer.parseInt(nd[1]);
+      int n = scanner.nextInt();
 
       int[] a = new int[n];
 
       String[] aItems = scanner.nextLine().split(" ");
-      scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+      //scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
       for (int i = 0; i < n; i++) {
          int aItem = Integer.parseInt(aItems[i]);
          a[i] = aItem;
       }
 
-      scanner.close();
+      //scanner.close();
    }
 }
